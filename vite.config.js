@@ -7,16 +7,6 @@ const outDir = resolve(__dirname, 'dist')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  root,
-  plugins: [react()],
-  build: {
-    outDir,
-    emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        main: resolve(root, 'index.html'),
-        how: resolve(root, 'how', 'index.html')
-      }
-    }
-  }
+  plugins: [vue()],
+  base: "/instalily"
 })
