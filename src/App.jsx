@@ -21,6 +21,7 @@ function App() {
             
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/instalily/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="*" element={<ErrorPage />} />
