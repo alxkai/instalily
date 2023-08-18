@@ -19,6 +19,7 @@ import img01 from "./img01.png";
 import img02 from "./img02.png";
 import arrowDown from "./arrow-down.svg";
 import team from "./team.png";
+import how from "./how.png";
 
 export {
   airbnb,
@@ -42,4 +43,5 @@ export {
   img02,
   arrowDown,
   team,
+  how,
 };
