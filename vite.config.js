@@ -9,7 +9,7 @@ const outDir = resolve(__dirname, 'dist')
 export default defineConfig({
   root,
   plugins: [react()],
-  base: "/instalily",
+  base: "/instalily/",
   build: {
     outDir,
     emptyOutDir: true,
