@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom'; // Import the Link component
 import styles from '../style';
 import { logo } from '../assets';
 import { footerLinks, socialMedia } from '../constants';
+import Form0 from './Form0';
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
     <div className={`${styles.flexStart} md:flex-row flex-col mb-8 mt-[-20px] w-full`}>
-      <div className="flex-1 flex flex-col justify-start mr-10">
+      <div className="flex-1 flex flex-col justify-start mr-0">
         <img 
           src={logo}
           className="w-[266px] h-[72px] object-contain"
@@ -17,6 +18,12 @@ const Footer = () => (
           <br />New York, NY 10013 
           <br /><a href="mailto:hello@instalily.ai" className="hover:underline">hello@instalily.ai</a>
         </p>
+      </div>
+
+      <div className={`bg-[#F2f2f2]] mt-[20px] ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Form0 />
+        </div>
       </div>
 
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">

@@ -59,15 +59,6 @@ export const stats = [
 
 export const footerLinks = [
   {
-    title: " ",
-    links: [
-      {
-        name: " ",
-        link: "https://www.hoobank.com/content/",
-      },
-    ],
-  },
-  {
     title: "Company",
     links: [
       {

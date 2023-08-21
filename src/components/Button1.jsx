@@ -28,12 +28,17 @@ const Button1 = ({ styles }) => {
         whileHover={{
           backgroundColor: '#A2F9DA', // Change the background color on hover
           color: '#181818', // Change the text color on hover
-          borderRadius: '0', // Change the border radius on hover
+          borderRadius: '10px', // Reset the border radius on hover
+          scale: 1.1, // Scale the button on hover
+        }}
+        transition={{
+          type: 'spring', // Use spring animation for smoother scaling
+          stiffness: 300,
+          damping: 25,
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center'}}>
           Get Started
-         
         </div>
       </motion.button>
     </a>
