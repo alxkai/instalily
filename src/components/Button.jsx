@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Button = ({ styles }) => {
   return (
-    <a href="https://calendly.com/alex-pmm/instalily-demo" target="_blank" rel="noopener noreferrer">
+    <a href="https://calendly.com/instalily/instalily-demo" target="_blank" rel="noopener noreferrer">
       <motion.button
         type="button"
         className={`py-4 px-6 font-poppins font-medium text-[26px] text-primary outline-none ${styles}`}

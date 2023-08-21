@@ -13,7 +13,7 @@ const Footer = () => (
           className="w-[266px] h-[72px] object-contain"
         />
         <p className="font-poppins text-[14px] leading-[27px] text-[#181818]" style={{ marginLeft: '48px' }}>
-          433 Broadway
+          433 Broadway Suite 207
           <br />New York, NY 10013 
           <br /><a href="mailto:hello@instalily.ai" className="hover:underline">hello@instalily.ai</a>
         </p>

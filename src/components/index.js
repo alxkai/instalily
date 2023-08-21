@@ -13,6 +13,8 @@ import Careers0 from "./Careers0";
 import Careers1 from "./Careers1";
 import Careers2 from "./Careers2";
 import Careers3 from "./Careers3";
+import Button from "./Button";
+import Button1 from "./Button1";
 
 export {
   Navbar,
@@ -30,4 +32,6 @@ export {
   Careers1,
   Careers2,
   Careers3,
+  Button,
+  Button1,
 };

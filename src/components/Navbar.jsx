@@ -1,13 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { close, logo, menu } from '../assets';
 import { navLinks } from '../constants';
-import { Link } from 'react-router-dom'; // Import the Link component
+import { Link } from 'react-router-dom';
+import styles from '../style';
+import Button1 from './Button1'; // Import the Button1 component
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Update viewport width on window resize
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar ">
+    <nav className="w-full flex py-6 justify-between items-center navbar">
       <img src={logo} className="w-[280px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 mt-1">
@@ -23,7 +37,11 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
+      {viewportWidth >= 1069 && (
+        <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-2`}>
+          <Button1 />
+        </div>
+      )}
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
@@ -54,7 +72,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          {/* Use the Button component */}
+
         </div>
+        
       </div>
     </nav>
   );
