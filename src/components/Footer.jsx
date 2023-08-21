@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component
 import styles from '../style';
 import { logo } from '../assets';
 import { footerLinks, socialMedia } from '../constants';
@@ -8,13 +10,12 @@ const Footer = () => (
       <div className="flex-1 flex flex-col justify-start mr-10">
         <img 
           src={logo}
-          alt="hoobank"
           className="w-[266px] h-[72px] object-contain"
         />
         <p className="font-poppins text-[14px] leading-[27px] text-[#181818]" style={{ marginLeft: '48px' }}>
           433 Broadway
           <br />New York, NY 10013 
-          <br />hello@instalily.ai
+          <br /><a href="mailto:hello@instalily.ai" className="hover:underline">hello@instalily.ai</a>
         </p>
       </div>
 
@@ -27,9 +28,10 @@ const Footer = () => (
             <ul className="list-none mt-4">
               {footerLink.links.map((link, index) => (
                 <li key={link.name}
-                  className={`font-inter font-normal text-[16px] leading-[24px] text-[#181818] hover:text-secondary cursor-pointer ${index !== footerLink.links.length -1 ? 'mb-4' : 'mb-0'}`}
+                  className={`font-inter font-normal text-[16px] leading-[24px] text-[#181818] hover:underline cursor-pointer ${index !== footerLink.links.length -1 ? 'mb-4' : 'mb-0'}`}
                 >
-                  {link.name}
+                  {/* Use an absolute path */}
+                  <Link to={`/${link.link}`} className="hover:underline">{link.name}</Link>
                 </li> 
               ))}
             </ul>
@@ -43,6 +45,7 @@ const Footer = () => (
         © 2023 Instalily. All Rights Reserved
       </p>
       <div className="flex flex-row md:mt-0 mt-6">
+        {/* 
         {socialMedia.map((social, index) => (
           <img 
             key={social.id}
@@ -52,9 +55,10 @@ const Footer = () => (
           />
         )
         )}
+        */}
       </div>
     </div>
   </section>
-)
+);
 
-export default Footer
+export default Footer;

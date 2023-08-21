@@ -1,6 +1,5 @@
 import styles from '../style';
-
-import { Home0, Home1, CTA, Home2, Home3, Home4, Footer } from '../components';
+import { Home0, Home1, CTA, Home2, Home3, Footer } from '../components';
 
 const Home = () => (
   <div className="bg-[#F2F2F2] w-full overflow-hidden">
@@ -10,7 +9,7 @@ const Home = () => (
           <Home0 />
         </div>
       </div>
-      <div className={`bg-[#F2f2f2]] ${styles.paddingX} ${styles.flexStart}`} style={{ borderBottom: '1px solid #181818'}}>
+      <div className={`bg-[#F2f2f2] ${styles.paddingX} ${styles.flexStart}`} style={{ borderBottom: '1px solid #181818'}}>
         <div className={`${styles.boxWidth}`}>
           <Home1 />
         </div>
@@ -28,11 +27,6 @@ const Home = () => (
       <div className={`bg-[#F2f2f2]] ${styles.paddingX} ${styles.flexStart}`} style={{ borderBottom: '1px solid #181818' }}>
         <div className={`${styles.boxWidth}`}>
           <Home3 />
-        </div>
-      </div>
-      <div className={`bg-[#F2f2f2]] ${styles.paddingX} ${styles.flexStart}`} style={{ borderBottom: '1px solid #181818' }}>
-        <div className={`${styles.boxWidth}`}>
-          <Home4 />
         </div>
       </div>
       <div className={`bg-[#F2f2f2]] ${styles.paddingX} ${styles.flexStart}`} style={{ borderBottom: '1px solid #181818' }}>

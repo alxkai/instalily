@@ -1,4 +1,4 @@
-import { airbnb, binance, coinbase, dropbox, facebook, instagram, linkedin, twitter, send, shield, star  } from "../assets";
+import { magnite, newengen, saatva, aperiam, facebook, instagram, linkedin, twitter, send, shield, star  } from "../assets";
 
 export const navLinks = [
   {
@@ -12,10 +12,6 @@ export const navLinks = [
   {
     id: "about",
     title: "About",
-  },
-  {
-    id: "careers",
-    title: "Careers",
   },
 ];
 
@@ -76,11 +72,11 @@ export const footerLinks = [
     links: [
       {
         name: "Careers",
-        link: "https://www.hoobank.com/help-center/",
+        link: "careers",
       },
       {
         name: "News",
-        link: "https://www.hoobank.com/help-center/",
+        link: "news",
       },
     ],
   },
@@ -89,15 +85,15 @@ export const footerLinks = [
     links: [
       {
         name: "Home",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "",
       },
       {
         name: "How It Works",
-        link: "https://www.hoobank.com/become-a-partner/",
+        link: "how",
       },
       {
         name: "About",
-        link: "https://www.hoobank.com/become-a-partner/",
+        link: "about",
       },
     ],
   },
@@ -129,18 +125,18 @@ export const socialMedia = [
 export const clients = [
   {
     id: "client-1",
-    logo: airbnb,
+    logo: magnite,
   },
   {
     id: "client-2",
-    logo: binance,
+    logo: newengen,
   },
   {
     id: "client-3",
-    logo: dropbox,
+    logo: saatva,
   },
   {
     id: "client-4",
-    logo: coinbase,
+    logo: aperiam,
   },
 ];

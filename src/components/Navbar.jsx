@@ -10,11 +10,11 @@ const Navbar = () => {
     <nav className="w-full flex py-6 justify-between items-center navbar ">
       <img src={logo} className="w-[280px]" />
 
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1 mt-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${
+            className={`font-poppins font-normal cursor-pointer text-[18px] ${
               index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
             } text-[#181818]`}
           >
@@ -35,19 +35,22 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? 'flex' : 'hidden'
-          } p-6 bg-[#f2f2f2] absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-[#181818] absolute top-20 right-0 mx-4 my-2 mt-4 min-w-[300px] rounded-xl sidebar`}
           style={{ border: '1px solid #181818' }}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${
+                className={`font-poppins font-normal cursor-pointer text-[20px] ${
                   index === navLinks.length - 1 ? 'mr-0' : 'mb-4'
-                } text-[#181818]`}
+                } text-[#f2f2f2]`}
               >
                 {/* Use the Link component */}
                 <Link to={nav.id}>{nav.title}</Link>
+                <div
+                  className="mt-1 h-[1px] w-full bg-[#f2f2f2]"
+                ></div>
               </li>
             ))}
           </ul>

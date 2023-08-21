@@ -1,22 +1,41 @@
-import { clients } from "../constants"
-import styles from "../style"
+import React from "react";
+import { motion } from "framer-motion";
+import { clients } from "../constants";
+import styles from "../style";
 
 const Home1 = () => (
   <section className={`${styles.flexCenter} my-4`}>
-    <div className={`${styles.flexCenter} flex-wrap w-full`}>
-
-      <h1 className="flex-1 text-center font-poppins font-semibold mt-[16px] mb-[0px] ss:text-[32px] text-[32px] text-[#181818] ss:leading-[140%] leading-[140%]">
-        Our Partnerships{" "}
-      </h1>
-      <div className="w-full flex flex-wrap justify-center py-4"> 
-        {clients.map((client) => (
-          <div key={client.id} className={`flex-1 ${styles.flexCenter} sm:min-w-[192px] min-w-[120ox]`}>
-            <img src={client.logo} alt="client" className="sm:w-[192px] w-[100px] object-contain" />
-          </div>
+    <div className={`w-full`}>
+      <motion.h1
+        className="text-center font-poppins font-semibold mt-4 mb-0 text-[40px] text-[#181818] leading-[140%]"
+        initial={{ opacity: 0, y: 20 }} // Initial position and opacity
+        animate={{ opacity: 1, y: 0 }} // Animation while entering
+        transition={{ duration: 1, delay: 0.2 }} // Animation duration and delay
+      >
+        Our Partnerships
+      </motion.h1>
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-4 gap-4 items-center justify-center py-4 ${styles.maxWidth}`}
+      >
+        {clients.map((client, index) => (
+          <motion.div
+            key={client.id}
+            className="w-full p-2"
+            initial={{ opacity: 0, y: 20 }} // Initial position and opacity
+            animate={{ opacity: 1, y: 0 }} // Animation while entering
+            transition={{ duration: 1, delay: 0.5 + index * 0.5 }} // Animation duration and delay
+          >
+            <img
+              src={client.logo}
+              alt={client.name}
+              className={`mx-auto object-contain ${styles.responsiveImage}`}
+              style={{ maxWidth: "200px" }} // Adjust this value
+            />
+          </motion.div>
         ))}
       </div>
     </div>
   </section>
-)
+);
 
-export default Home1
+export default Home1;

@@ -17,7 +17,10 @@
 * {
   scroll-behavior: smooth;
 }
-
+.responsiveImage {
+  max-width: 100%; /* Adjust the max-width as needed */
+  height: auto; /* Maintain the aspect ratio */
+}
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 70% 35.69%,

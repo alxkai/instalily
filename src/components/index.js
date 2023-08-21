@@ -5,7 +5,7 @@ import Home0 from "./Home0";
 import Home1 from "./Home1";
 import Home2 from "./Home2";
 import Home3 from "./Home3";
-import Home4 from "./Home4";
+import How0 from "./How0";
 import About0 from "./About0";
 import About1 from "./About1";
 import About2 from "./About2";
@@ -22,7 +22,7 @@ export {
   Home1,
   Home2,
   Home3,
-  Home4,
+  How0,
   About0,
   About1,
   About2,

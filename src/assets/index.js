@@ -1,7 +1,7 @@
-import airbnb from "./airbnb.png";
-import binance from "./binance.png";
-import coinbase from "./coinbase.png";
-import dropbox from "./dropbox.png";
+import magnite from "./magnite.png";
+import newengen from "./newengen.png";
+import saatva from "./saatva.png";
+import aperiam from "./aperiam.png";
 import logo from "./logo0.svg";
 import hero from "./hero.png";
 import send from "./Send.svg";
@@ -22,10 +22,10 @@ import team from "./team.png";
 import how from "./how.png";
 
 export {
-  airbnb,
-  binance,
-  coinbase,
-  dropbox,
+  magnite,
+  newengen,
+  saatva,
+  aperiam,
   logo,
   hero,
   send,
